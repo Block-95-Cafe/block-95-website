@@ -588,9 +588,9 @@ export default function LandingPage() {
             {/* Specific styling to override last-child styling*/}
             <div
               style={{
-                "border-left": "none",
-                "padding-right": 0,
-                "padding-left": 0,
+                borderLeft: "none",
+                paddingRight: 0,
+                paddingLeft: 0,
               }}
               // className="menu-col"
             >
