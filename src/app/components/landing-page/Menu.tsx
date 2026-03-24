@@ -1,5 +1,5 @@
-export default function Menu({ styles }) {
-  const menuItems = {
+export default function Menu({ styles }: any) {
+  const menuItems: any = {
     "Limited Espresso": {
       subHeader: "Hot / Iced · Prepared in limited daily quantities",
       items: [
@@ -47,7 +47,7 @@ export default function Menu({ styles }) {
               <div className={styles["menu-col"]}>
                 {menuItems[header].items
                   .slice(0, Math.ceil(menuItems[header].items.length / 2))
-                  .map((item) => (
+                  .map((item: any) => (
                     <div className={styles["menu-item"]} key={item.name}>
                       <span className={styles["menu-item-name"]}>
                         {item.name}
@@ -61,7 +61,7 @@ export default function Menu({ styles }) {
               <div className={styles["menu-col"]}>
                 {menuItems[header].items
                   .slice(Math.ceil(menuItems[header].items.length / 2))
-                  .map((item) => (
+                  .map((item: any) => (
                     <div className={styles["menu-item"]} key={item.name}>
                       <span className={styles["menu-item-name"]}>
                         {item.name}
