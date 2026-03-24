@@ -1,8 +1,8 @@
 "use client";
 
 import styles from "./page.module.css";
-import Hero from "./components/landing-page/Hero.tsx";
-import Menu from "./components/landing-page/Menu.tsx";
+import Hero from "./components/landing-page/Hero";
+import Menu from "./components/landing-page/Menu";
 
 export default function LandingPage() {
   const block95 = {
