@@ -1,19 +1,15 @@
 "use client";
 
-import styles from "./page.module.css";
+import styles from "@/src/app/page.module.css";
 import Hero from "./components/landing-page/Hero";
 import Menu from "./components/landing-page/Menu";
+import InfoStrip from "./components/landing-page/InfoStrip";
 
 export default function LandingPage() {
-  const block95 = {
-    address: "3155 Bruckner Blvd",
-    cityAndState: "Bronx, NY 10461",
-  };
-
   return (
     <main className={styles.landing}>
       {/* Hero */}
-      <Hero styles={styles} />
+      <Hero />
       {/* Marquee */}
       <div className={styles["marquee-wrap"]}>
         <div className={styles["marquee-inner"]}>
@@ -31,27 +27,10 @@ export default function LandingPage() {
       </div>
 
       {/* Menu */}
-      <Menu styles={styles} />
+      <Menu />
 
       {/* Info Strip */}
-      <div className={styles["info-strip"]}>
-        <div className={styles["info-cell"]}>
-          <p className={styles["info-cell-label"]}>Hours</p>
-          <p className={styles["info-cell-value"]}>
-            Mon – Sat
-            <br />
-            8am – 4pm
-          </p>
-        </div>
-        <div className={styles["info-cell"]}>
-          <p className={styles["info-cell-label"]}>Location</p>
-          <p className={styles["info-cell-value"]}>
-            {block95.address}
-            <br />
-            {block95.cityAndState}
-          </p>
-        </div>
-      </div>
+      <InfoStrip />
 
       {/* Footer */}
       <footer className={styles.footer}>
