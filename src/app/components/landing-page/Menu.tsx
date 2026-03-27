@@ -1,53 +1,22 @@
-export default function Menu({ styles }: any) {
-  const menuItems: any = {
-    "Limited Espresso": {
-      subHeader: "Hot / Iced · Prepared in limited daily quantities",
-      items: [
-        { name: "Classic Latte", price: "8oz / $4.00" },
-        { name: "Americano", price: "8oz / $3.00" },
-        { name: "Cappuccino", price: "8oz / $3.50" },
-        { name: "Iced Latte", price: "12oz / $4.50" },
-        { name: "Iced Americano", price: "12oz / $3.50" },
-        { name: "Iced Chai", price: "12oz / $4.50" },
-      ],
-      addons: {
-        "Oat or Almond Milk": "+$0.75",
-        "Extra Espresso Shot": "+$1.00",
-        "Vanilla / Sugar Cane Syrup": "+$0.75",
-      },
-    },
-    Teas: {
-      subHeader: "Hot · 8oz",
-      items: [
-        { name: "Black Tea", price: "8oz / $2.00" },
-        { name: "Green Tea", price: "8oz / $2.00" },
-        { name: "Hot Chocolate", price: "8oz / $4.00" },
-        { name: "Chai Latte", price: "8oz / $4.00" },
-      ],
-    },
-    Smoothies: {
-      subHeader: "Iced · 8oz",
-      items: [{ name: "Berry Blast", price: "12oz / $6.00" }],
-    },
-  };
+import styles from "@/src/app/page.module.css";
+import { menuItems, MenuItem } from "@/lib/data/menu";
 
+export default function Menu() {
   return (
     <section id="menu" className={styles["menu-section"]}>
       <p className={styles["section-label"]}>Menu — 001</p>
 
-      {Object.keys(menuItems).map((header, i) => {
+      {Object.entries(menuItems).map(([header, category], i) => {
         return (
           <div key={i}>
             <h2 className={styles["menu-header"]}>{header}</h2>
-            <p className={styles["menu-sub-header"]}>
-              {menuItems[header].subHeader}
-            </p>
+            <p className={styles["menu-sub-header"]}>{category.subHeader}</p>
 
             <div className={styles["menu-grid"]}>
               <div className={styles["menu-col"]}>
-                {menuItems[header].items
-                  .slice(0, Math.ceil(menuItems[header].items.length / 2))
-                  .map((item: any) => (
+                {category.items
+                  .slice(0, Math.ceil(category.items.length / 2))
+                  .map((item: MenuItem) => (
                     <div className={styles["menu-item"]} key={item.name}>
                       <span className={styles["menu-item-name"]}>
                         {item.name}
@@ -59,9 +28,9 @@ export default function Menu({ styles }: any) {
                   ))}
               </div>
               <div className={styles["menu-col"]}>
-                {menuItems[header].items
-                  .slice(Math.ceil(menuItems[header].items.length / 2))
-                  .map((item: any) => (
+                {category.items
+                  .slice(Math.ceil(category.items.length / 2))
+                  .map((item: MenuItem) => (
                     <div className={styles["menu-item"]} key={item.name}>
                       <span className={styles["menu-item-name"]}>
                         {item.name}

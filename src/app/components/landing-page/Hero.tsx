@@ -1,21 +1,10 @@
 import Image from "next/image";
+import styles from "@/src/app/page.module.css";
 
-export default function Hero({ styles }: any) {
+export default function Hero() {
   return (
     <section className={styles.hero}>
       <p className={styles["hero-eyebrow"]}>Specialty Coffee · New York</p>
-      {/* Little guy on the right (fail)*/}
-      {/*<h1 className={styles["hero-title"]}>
-        Block
-        <span>
-          95
-          <img
-            className={styles["little-guy"]}
-            src="/littleguy.svg"
-            alt="little guy"
-          />
-        </span>
-      </h1>*/}
 
       <h1 className={styles["hero-title"]}>
         <Image
