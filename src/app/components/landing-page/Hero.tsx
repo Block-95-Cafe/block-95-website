@@ -4,7 +4,7 @@ import styles from "@/src/app/page.module.css";
 export default function Hero() {
   return (
     <section className={styles.hero}>
-      <p className={styles["hero-eyebrow"]}>Specialty Coffee · New York</p>
+      <p className={styles["hero-eyebrow"]}>Bronx Based Cafe · New York</p>
 
       <h1 className={styles["hero-title"]}>
         <Image
@@ -20,7 +20,6 @@ export default function Hero() {
         </span>
       </h1>
 
-      <p className={styles["hero-eyebrow"]}>Espresso · Teas · Smoothies</p>
       <div className={styles["hero-socials"]}>
         <a
           href="https://www.instagram.com/block95cafe"
@@ -94,7 +93,7 @@ export default function Hero() {
 
       <div className={styles["hero-badge"]}>
         <p className={styles["hero-badge-text"]}>
-          Est. 2025
+          Est. 2026
           <br />
           Block
           <br />
